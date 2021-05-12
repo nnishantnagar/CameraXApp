@@ -7,19 +7,16 @@
     tools:context=".MainActivity">
 
     <Button
-        android:id="@+id/camera_capture_button"
-        android:layout_width="200dp"
-        android:layout_height="74dp"
-        android:layout_marginBottom="50dp"
-        android:elevation="2dp"
-        android:scaleType="fitCenter"
-        android:text="Take Photo"
+        android:id="@+id/button"
+        android:layout_width="0dp"
+        android:layout_height="61dp"
+        android:layout_marginEnd="38dp"
+        android:text="Uploaded Files"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/camera_capture_button"
         app:layout_constraintTop_toBottomOf="@+id/viewFinder"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="0.952" />
 
     <androidx.camera.view.PreviewView
         android:id="@+id/viewFinder"
@@ -29,6 +26,21 @@
         app:layout_constraintBottom_toTopOf="@+id/camera_capture_button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
+
+    </androidx.camera.view.PreviewView>
+
+    <Button
+        android:id="@+id/camera_capture_button"
+        android:layout_width="0dp"
+        android:layout_height="69dp"
+        android:layout_marginEnd="39dp"
+        android:layout_marginBottom="4dp"
+        android:elevation="2dp"
+        android:scaleType="fitCenter"
+        android:text="Take Photo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/button"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
